@@ -69,14 +69,23 @@ public class Coche{
             JOptionPane.showMessageDialog(null, "The car isn't turn on.", "Notification", 1);
     }
 
+
     public void setColor(){
         String color = JOptionPane.showInputDialog(null, "Type color of car.", "Color", JOptionPane.INFORMATION_MESSAGE);
         this.color = color;
     }
 
+    public String getColor(){
+        return color;
+    }
+
     public void setCompany(){
         String company = JOptionPane.showInputDialog(null, "Type company of car. ", "Company.", JOptionPane.INFORMATION_MESSAGE);
         this.company = company;
+    }
+
+    public String getCompany(){
+        return company;
     }
     
     public void setPrice(){
@@ -84,5 +93,12 @@ public class Coche{
                                         "Price.", JOptionPane.INFORMATION_MESSAGE));
         this.price = price;
     }
- 
+
+    public float getPrice(){
+        return price;
+    }
+
+    public int getSeats(){
+        return seats;
+    }
 }
