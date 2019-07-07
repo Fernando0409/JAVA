@@ -11,13 +11,13 @@ public class Venta_Coches extends Coche{
     private String nameClient, nameEmployee;
     private String dateBought; 
  
-    public Venta_Coches(String company, int cantidadCoche, int seats, String color, float price){
-        this(company, seats, color, price);
+    public Venta_Coches(String company, int cantidadCoche, int seats, String color){
+        this(company, seats, color, 50000);
         this.cantidadCoches = cantidadCoche;
     }
 
-    public Venta_Coches(String company, int cantidadCoches, int seats, float price){
-        this(company, seats, price);
+    public Venta_Coches(String company, int cantidadCoches, int seats){
+        this(company, seats, 50000);
         this.cantidadCoches = cantidadCoches;
     }
 
