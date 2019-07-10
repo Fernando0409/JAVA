@@ -10,6 +10,7 @@ public class Marcos2{
         
         Panel panel = new Panel();
         frame.add(panel);   // Add the frame the component panel
+        panel.setBackground(SystemColor.window);
         
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -45,7 +46,6 @@ class Panel extends JPanel{
 
     public void paintComponent(Graphics g){
         super.paintComponent(g);    // Call you to method in the father's class
-        g.drawString("Hello World! Painting with Graphics", 50, 30);
 
         // Graphics 
         g.drawRect(50, 50, 70, 40); // 90, 120
@@ -54,13 +54,21 @@ class Panel extends JPanel{
         // Graphics 2D
         Graphics2D graphics2d = (Graphics2D) g;
 
+        // Draw the figures
         Rectangle2D rectangle = new Rectangle2D.Double(100, 120, 200, 150);
         
         Ellipse2D ellipse = new Ellipse2D.Double();
         ellipse.setFrame(rectangle);
 
-        graphics2d.draw(ellipse);
-        graphics2d.draw(rectangle);
+        graphics2d.setPaint(Color.YELLOW);
+        graphics2d.fill(rectangle);
+
+        graphics2d.setPaint(Color.BLUE); // Set the color that will be colored 
+        graphics2d.fill(ellipse);   // Fill the figure with the color stablish
+
+        graphics2d.setPaint(Color.BLACK);
+        graphics2d.setFont(new Font("Noto Sans", Font.BOLD, 26));
+        graphics2d.drawString("Hello World! Painting with Graphics 2D", 50, 30);
 
     }
 }
