@@ -11,13 +11,17 @@ public class Venta_Coches extends Coche{
     private String nameClient, nameEmployee;
     private String dateBought; 
  
+    public Venta_Coches(){
+        super();
+    }
+
     public Venta_Coches(String company, int cantidadCoche, int seats, String color){
-        this(company, seats, color, 50000);
+        super(company, seats, color, 50000);
         this.cantidadCoches = cantidadCoche;
     }
 
     public Venta_Coches(String company, int cantidadCoches, int seats){
-        this(company, seats, 50000);
+        super(company, seats, 50000);
         this.cantidadCoches = cantidadCoches;
     }
 
@@ -36,7 +40,7 @@ public class Venta_Coches extends Coche{
     }
 
     public String getDateBought(){
-		return "The car was bought on "+dateBought+string;
+		return "The car was bought on "+dateBought+"\n";
     }
 
     public void setNameClient(String nameClient){
@@ -77,6 +81,7 @@ public class Venta_Coches extends Coche{
                              "Name Employee"+getNameEmployee()+"\n"+
                              "Date Bought:"+getDateBought()+"\n"+
                              "Price: "+super.getPrice()+"\n";
+        JOptionPane.showMessageDialog(null, information, "Notification", JOptionPane.INFORMATION_MESSAGE);
     }
 
     public void setRefund(String nameClient, String company){

@@ -1,6 +1,5 @@
 package aplicacionesgraficas;
 
-import java.awt.Frame;
 import javax.swing.JFrame;
 
 public class Marcos{

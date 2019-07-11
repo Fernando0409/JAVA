@@ -9,15 +9,20 @@ public class Coche{
     private float price, weight;
     private boolean turnOn;
 
+    public Coche(){
+        llantas = 4;
+        weight = 100;
+    }
+
     public Coche(String company, int seats, String color, float price){
         this.seats = seats;
         this.color = color;
         this.company = company;
         this.price = price;
         
-        this.llantas = 4;
-        this.weight = 100; // Kg
-        this.turnOn = false;
+        llantas = 4;
+        weight = 100; // Kg
+        turnOn = false;
     }
 
     public Coche(String company, int seats, float price){
