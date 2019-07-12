@@ -18,7 +18,7 @@ public class Frame extends JFrame{
 
         setBounds(width/4, height/4, width/2, height/2);
 
-        Image icon = toolkit.getImage("aplicacionesgraficas/tux.png");
+        Image icon = toolkit.getImage("aplicacionesgraficas/img/tux.png");
         setIconImage(icon);
     }
 }
